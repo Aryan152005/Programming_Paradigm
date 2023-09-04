@@ -1,0 +1,18 @@
+
+Write a programe in c++ to print the fibonaaci series upto n number using for loop;
+
+To find the factorial of a number using while loop.
+
+To design calc for arithmetic operations using switch case.
+
+
+EXP 2
+a Addition;
+b pallindrome;
+c fibonaaci;
+d fact;
+e switch case;
+f WAP in C++ to design KBC interface for 10 number of questions and display the winning amount of the participant .
+
+
+8/8/2023
