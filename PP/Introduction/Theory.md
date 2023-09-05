@@ -139,3 +139,26 @@ Plymorphism is another OOPS concept which means having many forms.
 * Function overloading meas a single class may contain more than one function definiion witht the same name but they should differ in their parameters.
 * Ex: Method Overriding
 
+(5/9/2023)
+
+```mermaid
+graph LR
+A[Polymorphism] -->  B[Compile Time] --> D[Method Overloading]
+A[Polymorphism] -->  C[Run Time] --> E[Method Overriding]
+```
+**Constructor Overloading :**
+We are defining the many constructor in a class which has same name but different parameter.
+```cpp
+class Add{
+    public:
+    Add(){  }
+    Add(int i, int j){  }
+    Add(float f1, f2){   }
+};
+int main(){
+Add a1;
+Add a2(10,20);
+Add a3(1.2,2.4);
+}
+
+```

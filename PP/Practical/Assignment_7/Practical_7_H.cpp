@@ -1,0 +1,1 @@
+// WAP to print the names of the student by creating a student class. If no name is passed while creating an object unkown, otherwise the name should be equal to the string valu passed while creating the object 
