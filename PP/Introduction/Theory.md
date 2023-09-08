@@ -162,3 +162,15 @@ Add a3(1.2,2.4);
 }
 
 ```
+(7/9/2023)
+
+**Operator Overloading:**
+It is a phenomene in which we are giving extra task to the operator.
+```cpp
+public:
+***********
+ returnType operator symbol (arguments){
+    *******
+ }
+***********
+```
