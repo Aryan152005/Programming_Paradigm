@@ -181,3 +181,95 @@ public:
 
 **Binary operator:** operatos on two operand,.
 
+(12/9/2023)
+
+Which are the operators in c++ that can never be overloaded and why?
+
+=> In C++, there are a few operators that cannot be overloaded. These operators are:
+1. **::** (Scope Resolution Operator): This operator is used to define the scope of a function or variable. It cannot be overloaded because overloading it would interfere with the basic language syntax.
+
+2. **.** (Member Access Operator): This operator is used to access the members of a class or structure. It cannot be overloaded because it would lead to ambiguity and confusion.
+
+3. *.** (Pointer to Member Operator): This operator is used to access a member through a pointer. Like the dot operator, it cannot be overloaded for similar reasons.
+
+4. **?:** (Conditional Operator): This operator is used for conditional expressions. It cannot be overloaded because it has a specific, built-in behavior that would be difficult to replicate through overloading.
+
+5. **sizeof**: This operator is used to determine the size of a data type or variable. It cannot be overloaded because it is a compile-time operator, and overloading it would require runtime behavior.
+
+6. **typeid**: This operator is used for obtaining type information at runtime. It cannot be overloaded because it is a language feature that relies on specific compiler support.
+
+7. **const_cast**: This operator is used for type casting away constness. Overloading it would lead to potential type safety issues.
+
+8. **dynamic_cast**: This operator is used for performing safe downcasting in a class hierarchy. It relies on the runtime type information (RTTI) system, and overloading it could lead to unsafe behavior.
+
+9. **reinterpret_cast**: This operator is used for low-level casting between pointer types. Overloading it could lead to unsafe type conversions.
+
+10. **typeid**: This operator is used to get type information at runtime. It cannot be overloaded because it is a language feature and not a user-defined function.
+
+These operators are either fundamental to the language's syntax and semantics or rely on specific compiler features, making them unsuitable for overloading. Attempting to overload these operators would likely lead to ambiguous behavior or conflicts with the language's built-in functionality.
+
+## Inheritance:
+```mermaid
+graph LR
+A[A] -->  B[Base class / parent / super]
+A[A] -->  C[B] --> E[Derived class / child class]
+```
+```cpp
+class A {
+    * * * * 
+};
+class B : public  A // Here we are inheriting the elements of class A to B
+{
+     * * * *
+};
+```
+
+1. Private
+2. Public
+3. Protected = members are only accessible to the next derived class `only`.
+
+**Types of Inheritance:**
+1. Single Inheritance 
+```mermaid
+graph LR
+    A[A] -->  B[B]
+```
+2. Multiple inheritance
+```mermaid
+graph LR
+    A[A] -->  B[B]
+    A[A] --> C[C]
+    B[B] --> C[C]
+```
+3. Multilevel inheritance 
+```mermaid
+graph LR
+    A[A] -->  B[B] --> C[C]
+```
+4. Hybrid Inheritance 
+```mermaid
+classDiagram
+    A --> B
+    A --> C
+    B --> D
+    C --> D
+```
+5. Hierarchical Inheritance
+```mermaid
+classDiagram
+    A--> B
+    A--> C
+    A--> D
+    class A{
+        Base class
+    }
+    class B {
+        Derived class
+    }
+    class C {
+        Derived class
+    }
+    class D {
+        Derived class
+    }
+```
