@@ -174,3 +174,10 @@ public:
  }
 ***********
 ```
+
+(8/9/2023)
+
+**Unary operator:** operates on a single operand only : preefix, post-fix, increment, decreement.
+
+**Binary operator:** operatos on two operand,.
+
