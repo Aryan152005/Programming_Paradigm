@@ -1,19 +1,29 @@
-#include<iostream>
+// Write CPP program to implement single inheritance class shape is used
+// initialize the parameter of different shapes and class area is derived from
+// shape class to find out the area of circle, square and rectangle
+
+#include <iostream>
 using namespace std;
-class A{
-    public:
-    float bonus;
+class shape {
+protected:
+  double length = 2, breadth = 2, radius = 2, side = 2;
 };
-class B : public A
-{
-    public:
-    float salary;
+class area : public shape {
+private:
+  double ar_rec = length * breadth;
+  double ar_sq = side * side;
+  double ar_cir = 3.14 * radius * radius;
+
+public:
+  void display() {
+    cout << "Area of Rectangle = " << ar_rec << endl;
+    cout << "Area of Square = " << ar_sq << endl;
+    cout << "Area of Circle = " << ar_cir << endl;
+  }
 };
-int main(){
-B b1;
-b1.bonus  = 22.32;
-b1.salary = 10000;
-cout<<"Bonus = "<<b1.bonus<<endl;
-cout<<"Salary = "<<b1.salary<<endl;
+int main() {
+    area a1;
+    a1.display();
 return 0;
 }
+
