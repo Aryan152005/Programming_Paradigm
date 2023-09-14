@@ -297,3 +297,31 @@ int main()
     return 0;
 }
 ```
+
+(14/9/2023)
+
+Q) why there is need to study programming langauge?
+
+Q) What is programming paradigm: approach to solve a pronblem ?
+
+Programming paradigm is majorly categorized into two:
+
+
+```mermaid
+classDiagram
+    Programming Paradigm --> Declerative 
+    Programming Paradigm --> Imperative
+    class Declerative{
+        Logical
+        Functional
+        Database
+    }
+    class Imperative{
+        Procedural
+        Parallel computing
+        Object Oriented
+    }
+```
+derived , structured, unstructured  datatype in C 
+
+Q) what is class and object?
