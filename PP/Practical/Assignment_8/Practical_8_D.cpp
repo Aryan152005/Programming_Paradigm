@@ -1,4 +1,4 @@
-//  WAP in C++ to overload Binary aestric operator
+// WAP in c++ to overload binary back slash operator
 
 // ARYAN ABHAY PARATAKKE
 // 22070521070
@@ -15,11 +15,11 @@ public:
         real = r;
         img = i;
     }
-    Complex operator*(Complex &obj)
+    Complex operator/(Complex &obj)
     {
         Complex res;
-        res.real = real * obj.real - img * obj.img;
-        res.img = real * obj.img + img * obj.real;
+        res.real = (real * obj.real + img * obj.img) / (obj.real * obj.real + obj.img * obj.img);
+        res.img = (img * obj.real - real * obj.img) / (obj.real * obj.real + obj.img * obj.img);
         return res;
     }
     void display()
@@ -31,7 +31,7 @@ public:
 int main()
 {
     Complex c1(10, 5), c2(2, 4);
-    Complex c3 = c1 * c2;
+    Complex c3 = c1 / c2;
     c3.display();
     return 0;
 }

@@ -1,33 +1,37 @@
-#include<iostream>
+// WAP in C++ to overload binary plus operator
+
+// ARYAN ABHAY PARATAKKE
+// 22070521070
+#include <iostream>
 using namespace std;
-class Count{
-    private:
-    int value;
-    public:
-    Count() : value(5){}
+class Complex
+{
+private:
+    int real, img;
 
-    void operator ++ (){
-        ++value;
+public:
+    Complex(int r = 0, int i = 0)
+    {
+        real = r;
+        img = i;
     }
-    void operator ++(int){
-        value++;
+    Complex operator-(Complex &obj)
+    {
+        Complex res;
+        res.real = real - obj.real;
+        res.img = img - obj.img;
+        return res;
     }
-    void display(){
-        cout<<"Count: "<<value<<endl;
+    void display()
+    {
+        cout << real << " is " << img << endl;
     }
-
 };
 
-int main(){
-    Count count1;
-    count1.display();
-    count1++;
-    count1.display();
-
-    Count count2;
-    count1.display();
-    ++count2;
-    count1.display();
-
+int main()
+{
+    Complex c1(10, 5), c2(2, 4);
+    Complex c3 = c1 - c2;
+    c3.display();
     return 0;
 }

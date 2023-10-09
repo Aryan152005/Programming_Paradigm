@@ -3,21 +3,24 @@
 balaguruswamy, Behrouz A. Forouzan -- books
 
 # A. PROGRAMMING LANGUAGES
+
  **Role Of Programming Languages:**
 
  P.L. is a tool for instructig machines. They are notations, used for specifying organizing and reasoning about computations. The Language should :
+
 1. Making the computation convenient for people.
-2. Making efficient use of computation machine 
+2. Making efficient use of computation machine
 3. Universal - ie should have relation with natural languages
 4. Portable - i.e. machine indepedent
 5. Verifiable and understandable  
 
 **Evolution of Programming Languages:**
- * Machine Lang : It is the native language of a computer It is the notation to which the computer responds directly. It consists of series of 0's and 1's to represent an insturction so the programs in machine lang. are unintelligible 
 
- * Assembly Lang : It is written in a low-level programming lang. consist of symbolic instruction. Each symbolic instruction is called mnemonnics, which is corresponding to a
+* Machine Lang : It is the native language of a computer It is the notation to which the computer responds directly. It consists of series of 0's and 1's to represent an insturction so the programs in machine lang. are unintelligible
 
-# Procedural Programming VS Object-Oriented Progrmming 
+* Assembly Lang : It is written in a low-level programming lang. consist of symbolic instruction. Each symbolic instruction is called mnemonnics, which is corresponding to a
+
+# Procedural Programming VS Object-Oriented Progrmming
 
 Below are some of the differences between procedural and object-oriented programming:
 
@@ -32,14 +35,16 @@ Below are some of the differences between procedural and object-oriented program
 | It is based on the unreal world | It is based on the real world|
 | It is used for designing medium-sized programs| It is used for designing large-sized programs|
 
-# Constructor 
+# Constructor
+
 * Constructor is a special member function in a class whose name is exactly same with the name of the class.
 * It does not have any written type not even void.
-* Contructor get automatically envoked or called within main function when object of that class is created 
+* Contructor get automatically envoked or called within main function when object of that class is created
 * The scope of constructor should always be public
 * It is automatically called whne object is created
 
-### Types of Constructor:
+### Types of Constructor
+
 1. Default Constructor
 2. Paramatrcized
 3. Copy Constructor
@@ -70,11 +75,11 @@ int main(){
 }
 ```
 
-
 (08/24/2023)
 
 **2. Parametricized Constuctor :**
 In C++, a parameterized constructor is a constructor that accepts one or more parameters when an object of a class is instantiated. This allows you to initialize the object with specific values during creation. Parameterized constructors are particularly useful when you want to ensure that objects of your class are created in a valid and initialized state
+
 ```cpp
 #include<iostream>
 #include<conio.h>
@@ -99,15 +104,17 @@ int main(){
 ```
 
 (29/08/2023)
- 
+
 * Scope Resolution Operator ( :: )
 
 **3. Copy Constructor :**
 It is a member function that initiaizes an object using another object of the same class.
 A constructor which creates an object by initializing it with an object of te same class, which has been created previously is known as copy Constructor.
 
-Usage: 
+Usage:
+
 1. It is used to initialize members of newly created object by copying the members of an already nexisting object. It take a reference to n object of same class as n argument
+
 ```cpp
 class MyClass {
 public:
@@ -123,18 +130,20 @@ public:
 
 (1/9/2023)
 
-# Polymorphism 
+# Polymorphism
 
 Plymorphism is another OOPS concept which means having many forms.
 
 **Types:**
-1. Compile Time Polymorphism 
+
+1. Compile Time Polymorphism
+
 * Code associated at the time of compilation.
 * Compile time polymorphism is implemented through function overloading and run time polymorphism is implemented thorugh method overriding.
 * Ex: Function / Method overloading.
 
+2. Run Time Polymorphism
 
-2. Run Time Polymorphism 
 * Code associated at the run time.
 * Function overloading meas a single class may contain more than one function definiion witht the same name but they should differ in their parameters.
 * Ex: Method Overriding
@@ -146,8 +155,10 @@ graph LR
 A[Polymorphism] -->  B[Compile Time] --> D[Method Overloading]
 A[Polymorphism] -->  C[Run Time] --> E[Method Overriding]
 ```
+
 **Constructor Overloading :**
 We are defining the many constructor in a class which has same name but different parameter.
+
 ```cpp
 class Add{
     public:
@@ -162,10 +173,12 @@ Add a3(1.2,2.4);
 }
 
 ```
+
 (7/9/2023)
 
 **Operator Overloading:**
 It is a phenomene in which we are giving extra task to the operator.
+
 ```cpp
 public:
 ***********
@@ -186,6 +199,7 @@ public:
 Which are the operators in c++ that can never be overloaded and why?
 
 => In C++, there are a few operators that cannot be overloaded. These operators are:
+
 1. **::** (Scope Resolution Operator): This operator is used to define the scope of a function or variable. It cannot be overloaded because overloading it would interfere with the basic language syntax.
 
 2. **.** (Member Access Operator): This operator is used to access the members of a class or structure. It cannot be overloaded because it would lead to ambiguity and confusion.
@@ -208,12 +222,14 @@ Which are the operators in c++ that can never be overloaded and why?
 
 These operators are either fundamental to the language's syntax and semantics or rely on specific compiler features, making them unsuitable for overloading. Attempting to overload these operators would likely lead to ambiguous behavior or conflicts with the language's built-in functionality.
 
-## Inheritance:
+## Inheritance
+
 ```mermaid
 graph LR
 A[A] -->  B[Base class / parent / super]
 A[A] -->  C[B] --> E[Derived class / child class]
 ```
+
 ```cpp
 class A {
     * * * * 
@@ -229,24 +245,32 @@ class B : public  A // Here we are inheriting the elements of class A to B
 3. Protected = members are only accessible to the next derived class `only`.
 
 **Types of Inheritance:**
-1. Single Inheritance 
+
+1. Single Inheritance : Single  base class and single derived class
+
 ```mermaid
 graph LR
     A[A] -->  B[B]
 ```
-2. Multiple inheritance
+
+2. Multiple inheritance : more than one base class and single derived class
+
 ```mermaid
 graph LR
     A[A] -->  B[B]
     A[A] --> C[C]
     B[B] --> C[C]
 ```
-3. Multilevel inheritance 
+
+3. Multilevel inheritance : The levels are increased when one base class is derived from other derived class
+
 ```mermaid
 graph LR
     A[A] -->  B[B] --> C[C]
 ```
-4. Hybrid Inheritance 
+
+4. Hybrid Inheritance : from one base class 2 derived clases and from these derived class on emore child class is made
+
 ```mermaid
 classDiagram
     A --> B
@@ -254,7 +278,9 @@ classDiagram
     B --> D
     C --> D
 ```
-5. Hierarchical Inheritance
+
+5. Hierarchical Inheritance : one base class and 2-3 child class.
+
 ```mermaid
 classDiagram
     A--> B
@@ -273,7 +299,9 @@ classDiagram
         Derived class
     }
 ```
+
 example of inheritance =
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -306,7 +334,6 @@ Q) What is programming paradigm: approach to solve a pronblem ?
 
 Programming paradigm is majorly categorized into two:
 
-
 ```mermaid
 classDiagram
     Programming Paradigm --> Declerative 
@@ -322,6 +349,122 @@ classDiagram
         Object Oriented
     }
 ```
-derived , structured, unstructured  datatype in C 
+
+derived , structured, unstructured  datatype in C
 
 Q) what is class and object?
+
+(52/09/2023)
+
+Define Inheritance and types of inheritance...
+
+Acess Specifires are of three types:
+
+1. Public
+2. Private
+3. Protected
+
+```mermaid
+classDiagram
+    A --> B
+    B --> C
+
+    class A{
+        Protected 
+        a =10;
+    }
+    class B{
+        Variables of A (protected) only availabe here on B
+        a =10;
+    }
+    class C{
+        No variables of A (protected) can be accesed here.
+        a not defined
+    }
+```
+
+```cpp
+class A{
+    public:
+    int i;
+    void displayA(){
+        i =10;
+        cout<<"i in A ="<<i;
+    }
+};
+
+class B : public A{
+    void displayB(){
+        cout<<"This is derived class method";
+    }
+};
+
+class C : public B{
+    ////////
+}
+
+int main(){
+    B b1;
+    b1.displayA();
+    b1.displayB();
+}
+```
+
+WAP in C++ to implement multilevel inheritance make one class organization derive employee class. From organization class from employee class derive salary details class to display the salary of ten employee in the organization ABC Corp. Ltd. The details of employee must be name, department name, date of joining and saalary of employee.
+
+```cpp
+class Organization{
+    public:
+    char name[50], dept[50], doj[15];
+    double sal;
+}
+class Employee : public Organization{
+    public:
+    void getDetails(int i){
+        cout<<"Enter details of Employee"<<i<<" =>";
+        cout<<"Employee Name: ";
+        cin>>name;
+        cout<<"Deaprtment Name: ";
+        cin>>dept;
+        cout<<"Date of Joining";
+        cin>>doj;
+        cout<<"Salary: ";
+        cin>>sal;
+    }
+};
+class SalaryDetails{
+    public:
+    void display(int i){
+        cout<<"Enter details of Employee"<<i<<" =>";
+        cout<<"Employee Name: "<<name<<endl;
+        cout<<"Deaprtment Name: "<<dept<<endl;
+        cout<<"Date of Joining"<<doj<<endl;
+        cout<<"Salary: "<<sal<<endl;
+    }
+}
+```
+
+(10/09/2023)
+
+1. compare method overloading with overriding?
+2. Do method overriding and implement this...
+
+### Method Overriding
+
+It allows compiler to declare same function name and type but they can differ in their block definition.
+If derived class is derived from base class then after calling the function in main, function of derived class is called or overrided.
+
+```cpp
+class Base{
+    public:
+    void print(){
+        cout<<"This is Base class Function";
+    }
+};
+
+class Child : public Base{
+    void print(){
+        cout<<"This is Derived class Function";
+    }
+};
+```
