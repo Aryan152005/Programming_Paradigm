@@ -468,3 +468,83 @@ class Child : public Base{
     }
 };
 ```
+
+(11/10/2023)
+
+**Static members in C++ :**
+
+* Static members of a class are not associated with the objects of the class. Just like a static variable once declared is allocated with memory that can't be changed every object points to the same memory. 
+
+* Static member function in C++ is declared with the keyword static .
+
+* Static members are frequently used to store information that is shared by all objects in a class.
+
+* It is independent of any object of the class.
+
+* Static member function can be called even if no ojbect of the class exist. It can also ve accessed using the class name throught the scope resolution operator.
+
+* Static member functions can access static data members and static data function inside or outside of the class.
+
+(12/10/2023)
+
+**Inline Funtion:**
+* C++ provides inline function to reduce the function call overhead.
+* An inline function is a function that is expanded inline when it is called.
+* When the inline function is called whole code of the inline function gets inserted or substituted of at the point where inline function is called . This substitution is perfromed by c++ compiler at compile time. An inline funtion may icrease efficiency when it is small.
+* The syntax for defining inline is =>  **inline return-type function-name(Parameters)** {}
+* Loops Break and static - We cannot make it Inline.
+
+When normal function call in code then the next line address in stored in Program Counter and then the execution control is transfered to the function declaration wherer it is executed in satckk operation and then again next lin efrom main is continued
+
+(16/10/2023)
+
+**Virtual Funtions in C++:**
+
+A virtual function (also known as virtual methods) is a member function that is declared within a base class and is re-defined (overridden) by a derived class. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class’s version of the method.
+
+* Virtual functions ensure that the correct function is called for an object, regardless of the type of reference (or pointer) used for the function call.
+* They are mainly used to achieve Runtime polymorphism.
+* Functions are declared with a virtual keyword in a base class.
+* The resolving of a function call is done at runtime.
+```cpp
+#include <iostream>
+using namespace std;
+class base
+{
+public:
+    virtual void print()
+    {
+        cout << "This is Base class funtion\n";
+    }
+    void display()
+    {
+        cout << "This is not a virtual funtion of base class\n";
+    }
+};
+
+class derived : public base
+{
+public:
+    void print()
+    {
+        cout << "This is derived class Funtion\n";
+    }
+    void display()
+    {
+        cout << "This is not a virtual funtion of derived class\n";
+    }
+};
+
+int main()
+{
+    base *bptr;
+    derived d;
+    bptr = &d;
+    bptr->print();
+    bptr->display();
+
+    return 0;
+}
+```
+
+Que. What is virtual function. Explain with exapmle. Explain early binding ans late binding with example.
