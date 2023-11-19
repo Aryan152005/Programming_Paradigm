@@ -588,3 +588,55 @@ WAP to find the greator number between the twp numbers who are private members o
 
 **Destructor:**
 It is a member function which is envoked automatically whenever an object is goin to be destroyed. Destructor is the last function that is going to be called before an object is destroyed.
+
+(25/10/2023)
+
+# Prolog
+Prolog or programming logic is a logical and declarative programming language. It is one of the majore example of 4th Generation language that supports the declarative programming paradigm. This is particularly suitable for programs that involves symbolic or non numeric computation.
+
+Some of the logic programming Languages are:
+1. ALF (Algebric Logic Functional Programming Language)
+2. ASP (Answer Set Programming)
+3. CycL
+4. Datalog
+5. Fuzzy CLIPS
+6. Janus
+7. Prolog
+8. Prolog++/prolog
+9. Roop
+
+Some of the applications of prolog are:
+1. Intelligent database retrival.
+2. Natural Language Understanding (NLP)
+3. Machine Learning.
+4. Robot Planning.
+5. Automation
+6. Problem solving
+
+(26/10/2023)
+
+Component:
+1. Knowledge Base.
+2. Queries or questions & Answers.
+3. Fact/Rules/predicate
+
+Facts:
+1. Tom is a Cat.
+2. Shreya likes singing.
+3. Jay likes to play cricket.
+
+Syntax:
+```prolog
+Cat(Tom).
+likes_to_sing(Shreya,Song).
+of_color(hair,black).
+likes_to_play(Jay,Cricket).
+
+<!-- Predicates/Rules: -->
+
+happy(Shreya):- dances(shreya).
+hungary(Tom):- Search_for_food(Tom).
+friends(a,b):- loves_cricket(a).loves_cricket(b)
+```
+
+
